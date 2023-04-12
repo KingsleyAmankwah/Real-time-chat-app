@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log("A user has connected.");
+  console.log("User is online.");
 
   socket.on("message", (message) => {
     console.log(`Received message: ${message}`);
@@ -18,7 +18,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("A user has disconnected.");
+    console.log("User is offline.");
   });
 });
 
